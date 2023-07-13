@@ -6,12 +6,6 @@ function newItem(){
         let li = $('<li></li>');
         let inputValue = $('#input').val();
         li.append(inputValue);
-
-        /* let li = document.createElement("li");
-        let inputValue = document.getElementById("input").value;
-        let text = document.createTextNode(inputValue);
-        li.appendChild(text); */
-        
   
         if (inputValue === '') {
             alert("You must write something!");
@@ -20,7 +14,7 @@ function newItem(){
         }
         
         //2. Crossing out an item from the list of items:
-        li.on("click", function() {
+        li.on("dblclick", function() {
             li.addClass("strike");
           });
         
@@ -37,5 +31,4 @@ function newItem(){
         // 4. Reordering the items: 
         $('#list').sortable();
         
-    
     }
